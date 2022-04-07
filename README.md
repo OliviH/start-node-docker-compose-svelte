@@ -5,5 +5,5 @@ Speed starting dockerized project with node express and svelte
 ## How to use it
 
 ```
-chmod +x ./nstall.sh && install.sh
+chmod +x ./install.sh && install.sh
 ```
