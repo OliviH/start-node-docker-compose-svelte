@@ -15,3 +15,7 @@ You need to have README file inside project and install.sh must be executable
 ```bash
 ./install.sh
 ```
+
+### Github Project
+
+> https://github.com/OliviH/start-node-docker-compose-svelte
