@@ -52,7 +52,7 @@ version: "3.7"
 
 services:
   engine:
-    container_name: $CONTAINER_NAME
+    container_name: \$CONTAINER_NAME
     build: ./engine
     restart: always
     env_file: ./.env
@@ -62,9 +62,9 @@ services:
       - ./front/public:/home/public
     labels:
       - "traefik.enable=true"
-      - "traefik.http.services.${PROJECT_NAME}_web.loadbalancer.server.port=3000"
-      - "traefik.http.routers.${PROJECT_NAME}_web.entrypoints=http"
-      - "traefik.http.routers.${PROJECT_NAME}_web.rule=Host(`${HOST}`)"
+      - "traefik.http.services.\${PROJECT_NAME}_web.loadbalancer.server.port=3000"
+      - "traefik.http.routers.\${PROJECT_NAME}_web.entrypoints=http"
+      - "traefik.http.routers.\${PROJECT_NAME}_web.rule=Host(\`\${HOST}\`)"
 EOF
 
 tee -a .env.example <<EOF
